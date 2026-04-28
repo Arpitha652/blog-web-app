@@ -3,11 +3,11 @@ import bodyParser from "body-parser";
 import {db,auth} from "./firebase.js";
 import { collection, addDoc, getDocs, deleteDoc,doc,updateDoc} from "firebase/firestore";
 import { signInWithEmailAndPassword, } from "firebase/auth";
+import session from "express-session";
 
 const app = express();
 const port = 3000;
 
-const session = require('express-session');
 
 app.use(session({
   secret: 'your-secret-key',

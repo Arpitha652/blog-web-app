@@ -22,7 +22,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // In-memory storage for posts
-let isLoggedIn = true;
+
 
 app.get("/", async (req, res) => {
   const snapshot = await getDocs(collection(db, "posts"));

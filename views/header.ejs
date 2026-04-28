@@ -1,0 +1,27 @@
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <h1>🖋️ Ink</h1>
+        </div>
+
+        <div class="top-btn">
+             <% if (isLoggedIn) { %>
+             <a href="/logout">Logout</a>
+             <% } else { %>
+              <a href="/login">Login</a>
+            <% } %>
+            <a href="/newpost" class="btn primary">New Post</a>
+            
+        </div>
+    </header>
+
+    <!-- SECOND ROW BUTTONS -->
+    <div class="sub-header">
+        <a href="/newpost" class="btn">Write New</a>
+        <a href="/" class="btn">All Post</a>
+    </div>
+
+   
+

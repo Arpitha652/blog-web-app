@@ -1,0 +1,24 @@
+{
+  "name": "rt",
+  "version": "1.0.0",
+  "description": "project",
+  "main": "enter",
+  "type": "module",
+  "scripts": {
+    "test": "h"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hj"
+  },
+  "keywords": [
+    "k"
+  ],
+  "author": "arpita",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "firebase": "^12.12.1"
+  }
+}

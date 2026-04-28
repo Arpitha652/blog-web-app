@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header layout */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: white;
+    padding: 15px 30px;
+}
+
+/* Logo */
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Top button */
+.top-btn .btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* Second row */
+.sub-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #f4f4f4;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Primary button */
+.primary {
+    background-color: #ff4d4d;
+}
+
+.primary:hover {
+    background-color: #e60000;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+    color: white;
+    margin-top: 20px;
+}
+
+.actions {
+    margin-top: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.edit {
+    background: #ffe0b2;
+    color: #e65100;
+}
+
+.delete {
+    background: #ffcdd2;
+    color: #b71c1c;
+}
+
+
+
+
+/* Publish */
+.publish {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.publish:hover {
+    background-color: #c0392b;
+}
+
+/* Cancel */
+.cancel {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.cancel:hover {
+    background-color: #ddd;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #ffd700;
+}
+
+.tag {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-top: 15px;
+}
+
+/* Posts section */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .date {
+    color: #999;
+    font-size: 12px;
+}
+
+.card h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.card .content {
+    color: #666;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Form container */
+.form-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-container .subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form */
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.post-form input,
+.post-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-actions .btn {
+    flex: 1;
+}

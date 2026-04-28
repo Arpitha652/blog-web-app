@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post - BLOG</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+ <%- include("header.ejs") %>
+
+<main class="form-container">
+
+    <h1>Write a New Post</h1>
+    <p class="subtitle">Put your thoughts into words.</p>
+
+    <form action="/newpost" method="POST" class="post-form">
+
+        <!-- TITLE -->
+        <label>POST TITLE</label>
+        <input 
+            type="text" 
+            name="title" 
+            placeholder="Give your post a title..." 
+            required
+        >
+
+        <!-- CONTENT -->
+        <label>CONTENT</label>
+        <textarea 
+            name="content" 
+            rows="8" 
+            placeholder="Start writing here..." 
+            required
+        ></textarea>
+
+        <!-- BUTTONS -->
+        <div class="form-actions">
+            <button type="submit" class="btn publish">Publish Post</button>
+            <a href="/" class="btn cancel">Cancel</a>
+        </div>
+
+    </form>
+
+</main>
+
+<%- include("footer.ejs") %>
+
+</body>
+</html>

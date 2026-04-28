@@ -7,6 +7,14 @@ import { signInWithEmailAndPassword, } from "firebase/auth";
 const app = express();
 const port = 3000;
 
+const session = require('express-session');
+
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: false
+}));
+
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
@@ -14,12 +22,12 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // In-memory storage for posts
-let isLoggedIn = false;
+let isLoggedIn = true;
 
 app.get("/", async (req, res) => {
   const snapshot = await getDocs(collection(db, "posts"));
   const posts = snapshot.docs.map(d => ({ _id: d.id, ...d.data() }));
-  res.render("index.ejs", { posts,isLoggedIn });
+  res.render("index.ejs", { posts,isLoggedIn:req.session.isLoggedIn  });
 });
 
 app.get("/newpost",requireLogin, (req, res) => {
@@ -62,7 +70,7 @@ app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    isLoggedIn = true;
+     req.session.isLoggedIn = true;
     res.redirect("/");
   } catch (err) {
     res.render("login.ejs", { error: "Invalid email or password" });
@@ -70,12 +78,12 @@ app.post("/login", async (req, res) => {
 });
 
 app.get("/logout", (req, res) => {
-  isLoggedIn = false;
+  req.session.isLoggedIn = false;
   res.redirect("/");
 });
 
 function requireLogin(req, res, next) {
-  if (!isLoggedIn) {
+  if (!req.session.isLoggedIn) {
     next();
   } else {
      res.redirect("/login");
